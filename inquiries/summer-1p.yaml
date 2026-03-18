@@ -1,0 +1,40 @@
+# Housing Inquiry: Summer 2026 (2 Persons)
+name: "Summer 2026"
+description: "Looking for summer housing just for me and Alja - July to September 2026"
+
+# Who
+people: 2
+
+# When
+date_ranges:
+  - from: "2026-07-01"
+    to: "2026-09-30"
+
+# Budget (per person) - can go higher for summer
+max_price_per_person: 350
+
+# Location
+location: "Koper"
+max_distance_from_center_km: 3
+
+# Priority (higher = more relevant)
+priority_factors:
+  - "Available for summer months"
+  - "Good location"
+  - "Balcony"
+  - "Good internet"
+  - "Well equiped"
+
+# Important context
+gender: "male (all boys group)"
+utilities_budget: 100
+
+# Red flags
+avoid:
+  - "Only available for school year"
+  - "Too far from Koper"
+  - "Female-only listings"
+  - "Couples only"
+
+# Source
+source: "mojcimer"

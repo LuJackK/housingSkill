@@ -1,0 +1,41 @@
+# Housing Inquiry: School Year 2026-27 (4 People)
+name: "School Year 2026-27 (4 People)"
+description: "Looking for housing for me and 3 colleagues for the entire school year"
+
+# Who
+people: 4
+
+# When
+date_ranges:
+  - from: "2026-10-01"
+    to: "2027-06-30"
+
+# Budget (per person)
+max_price_per_person: 300
+
+# Location
+location: "Koper"
+max_distance_from_center_km: 3
+
+# Priority (higher = more relevant)
+priority_factors:
+  - "Available for full school year"
+  - "Fits 4 people"
+  - "Good value per person"
+  - "Close to center/faculties"
+  - "Clean, well-maintained"
+
+# Important context
+gender: "male (all boys group)"
+utilities_budget: 100
+
+# Red flags
+avoid:
+  - "Only available for short term"
+  - "Too far from Koper"
+  - "Overpriced for what you get"
+  - "Female-only listings"
+  - "Couples only"
+
+# Source
+source: "mojcimer"

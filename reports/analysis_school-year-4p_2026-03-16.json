@@ -1,0 +1,585 @@
+{
+  "inquiry": "school-year-4p",
+  "date": "2026-03-16",
+  "total_analyzed": 25,
+  "recommended": 2,
+  "decent": 11,
+  "skip": 12,
+  "analysis": [
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Affordable price at €125 per person, well under the €300 budget",
+        "Matches capacity for 4 people",
+        "Decent size of 64 m² for a group"
+      ],
+      "negatives": [
+        "Rental period is for 2022, not compatible with the 2026-27 school year",
+        "Description is incomplete and vague"
+      ],
+      "restrictions": [
+        "Fixed rental period from October to end of May 2022 only"
+      ],
+      "rental_period": "October to end of May 2022",
+      "who_allowed": "Not specified",
+      "people_offered": "4 people in a two-room apartment",
+      "costs_included": "Unknown",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/13120",
+      "title": "Dvosobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14564",
+      "title": "Trisobno stanovanje",
+      "verdict": "Decent",
+      "verdict_class": "decent",
+      "positives": [],
+      "negatives": [
+        "Analysis error: Expecting property name enclosed in double quotes: line 5 column 3 (char 366)"
+      ],
+      "restrictions": [],
+      "rental_period": "",
+      "who_allowed": "",
+      "people_offered": "",
+      "costs_included": "",
+      "avg_utilities": null
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Price is well within budget at 230 EUR/person/month",
+        "Excellent location in Koper center near university",
+        "Capacity fits 4 people",
+        "Furnished with amenities like balcony and terrace"
+      ],
+      "negatives": [
+        "Rental period not specified, may not cover full school year",
+        "Description mentions 'ONE BED AVAILABLE', suggesting limited availability for a full group",
+        "Size of 60 m² might be tight for 4 people"
+      ],
+      "restrictions": [
+        "Prefer to rent to already agreed groups of students"
+      ],
+      "rental_period": "Not specified in listing",
+      "who_allowed": "Students",
+      "people_offered": "4 people, with two bedrooms each accommodating two people",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14658",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Sunny and spacious apartment with sea view balcony",
+        "Fully equipped with modern amenities including TV, internet, dishwasher, and washing machine",
+        "Close to universities and public transport with a 15-20 minute walk to faculties",
+        "Free and private parking available"
+      ],
+      "negatives": [
+        "Rental period (February to June 2026) does not match the school year 2026-27",
+        "Restricted to female students only, which may not fit all groups",
+        "Short rental duration ending in June 2026, not covering the full academic year"
+      ],
+      "restrictions": [
+        "Only for female students"
+      ],
+      "rental_period": "From 1 February 2026 to 25 June 2026",
+      "who_allowed": "Female students",
+      "people_offered": "4 people in two bedrooms",
+      "costs_included": "Rent is 300 EUR total, utilities are additional about 60 EUR per person",
+      "avg_utilities": "60 EUR per person (estimated)",
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15069",
+      "title": "Soba",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Price is well under budget at €62 per person",
+        "Capacity matches 4 people",
+        "Location in Koper may be convenient for students"
+      ],
+      "negatives": [
+        "Rental period not specified for school year 2026-27",
+        "Size of 60 m² may be tight for 4 people"
+      ],
+      "restrictions": [],
+      "rental_period": "Not specified in the listing",
+      "who_allowed": "Not specified",
+      "people_offered": "4 people in 2 double rooms (2 bedrooms)",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15209",
+      "title": "Soba",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Price is well under budget at €62 per person",
+        "Spacious apartment at 140 m²",
+        "Newer apartment likely in good condition"
+      ],
+      "negatives": [
+        "Description suggests only a room for two people is available, not the whole apartment for four",
+        "Rental period not specified for school year 2026-27",
+        "Location details not provided"
+      ],
+      "restrictions": [],
+      "rental_period": "Not specified in the listing",
+      "who_allowed": "Not specified",
+      "people_offered": "A room for two people in a 4-person apartment, but capacity listed as 4 people",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15094",
+      "title": "Soba",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Price is very affordable at 58 EUR per person, well under the 300 EUR budget",
+        "Location in Koper may be convenient for student access"
+      ],
+      "negatives": [
+        "Only one bed available, not suitable for a group of 4 people",
+        "Rental period likely does not match the 2026-27 school year based on description"
+      ],
+      "restrictions": [
+        "Rents to male/female students"
+      ],
+      "rental_period": "Not specified, appears to be for immediate availability",
+      "who_allowed": "male/female students",
+      "people_offered": "1 bed available in a 5-person capacity apartment",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15138",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Price well within budget at €71 per person",
+        "Capacity matches 4 people",
+        "Spacious at 75 m²",
+        "Description indicates suitability for students"
+      ],
+      "negatives": [
+        "Rental period not specified in listing",
+        "Location details (e.g., proximity to schools) not provided",
+        "Utilities status unknown"
+      ],
+      "restrictions": [],
+      "rental_period": "Not specified; inquire with landlord for School Year 2026-27 availability",
+      "who_allowed": "Students",
+      "people_offered": "4 people in a 3-room apartment",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15110",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Price is €68 per person, well under the €300 budget",
+        "Capacity matches exactly for 4 people",
+        "Size of 80 m² is spacious for the group"
+      ],
+      "negatives": [
+        "Rental period not specified, date compatibility uncertain",
+        "Limited details on location proximity to schools or amenities",
+        "Utilities inclusion and costs not mentioned"
+      ],
+      "restrictions": [],
+      "rental_period": "Not specified",
+      "who_allowed": "Not specified",
+      "people_offered": "4 people in two double rooms",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15083",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Extremely affordable at 40 EUR per person",
+        "Located in Koper"
+      ],
+      "negatives": [
+        "Restricted to female students only",
+        "Not a whole apartment rental; only a bed in a shared room",
+        "Unclear rental period for school year 2026-27"
+      ],
+      "restrictions": [
+        "Female students only"
+      ],
+      "rental_period": "Unknown",
+      "who_allowed": "Female students",
+      "people_offered": "One bed in a double room",
+      "costs_included": "Unknown",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14116",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Very low price per person at ~40 EUR",
+        "Spacious apartment size of 90 m²",
+        "Located in Žusterna, Koper, likely near student areas"
+      ],
+      "negatives": [
+        "Rental period starts October 1, 2025, not matching the 2026-27 school year inquiry",
+        "Listing is for a double room only, not the entire apartment for 4 people"
+      ],
+      "restrictions": [
+        "Likely restricted to students based on context"
+      ],
+      "rental_period": "From October 1, 2025, for the academic year (end date not specified)",
+      "who_allowed": "Students",
+      "people_offered": "Double room for 2 people, in a 5-person capacity apartment",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/13947",
+      "title": "Štirisobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Very affordable at €62 per person, well under the €300 budget",
+        "Capacity matches exactly 4 people",
+        "Sea view mentioned, adding appeal"
+      ],
+      "negatives": [
+        "Location is approximately 10 km from Koper, which may require a commute for students",
+        "Rental period for School Year 2026-27 is not specified in the listing"
+      ],
+      "restrictions": [],
+      "rental_period": "Not specified in the listing",
+      "who_allowed": "Not specified, likely open to students or anyone based on general listing context",
+      "people_offered": "4 people in a 3-room apartment (80 m²)",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15015",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Very low price (44 EUR per person if at full capacity)",
+        "Located in Koper"
+      ],
+      "negatives": [
+        "Only offers one bed in a shared room, insufficient for 4 people",
+        "Rental period not specified for School Year 2026-27"
+      ],
+      "restrictions": [
+        "None specified"
+      ],
+      "rental_period": "Not specified",
+      "who_allowed": "Not specified",
+      "people_offered": "One bed in a double room (apartment capacity for 5 people total)",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/13417",
+      "title": "Štirisobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Extremely affordable at 42 EUR per person for 6 people",
+        "Spacious 115 m² detached terraced house",
+        "Open to both female and male students"
+      ],
+      "negatives": [
+        "Rental period ends in June 2026, before the 2026-27 school year starts",
+        "Fixed total rent means higher per-person cost for fewer people, but still under budget",
+        "No information on utilities or additional costs"
+      ],
+      "restrictions": [
+        "Must be students",
+        "Both genders allowed"
+      ],
+      "rental_period": "from 1 October 2025 to 30 June 2026",
+      "who_allowed": "students (both female and male)",
+      "people_offered": "up to 6 people",
+      "costs_included": "not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14955",
+      "title": "Štirisobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Price is very affordable at ~68 EUR/person, well under the 300 EUR budget",
+        "Capacity matches exactly with 4 people",
+        "Size of 75 m² provides adequate space for students",
+        "Location in Koper may be convenient for local institutions"
+      ],
+      "negatives": [
+        "Description is unclear and inconsistent with price details (mentions 280€ for single rooms but summary says 270 EUR total)",
+        "Utilities are not included, adding to monthly costs",
+        "Room arrangement is ambiguous for a group of 4 (2 single and 2 double rooms)"
+      ],
+      "restrictions": [],
+      "rental_period": "Starts from October 1st, 2026; end date not specified, assumed for academic year 2026-27",
+      "who_allowed": "Not specified, likely open to all renters",
+      "people_offered": "4 rooms available: 2 single rooms and 2 double rooms, suitable for 4 people with mixed occupancy",
+      "costs_included": "Utilities are not included; paid separately by bills",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14579",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Recommended",
+      "positives": [
+        "Very affordable at €88 per person, well under budget",
+        "Matches capacity of 4 people exactly",
+        "Spacious 90 m² apartment with three rooms",
+        "Central location in Koper near Titov trg, convenient for students"
+      ],
+      "negatives": [
+        "Rental period only specified from October 1st, end date not mentioned, may not cover full school year",
+        "No information on utilities or additional costs provided"
+      ],
+      "restrictions": [],
+      "rental_period": "Available from October 1st, 2026. End date not specified.",
+      "who_allowed": "Not specified, likely open to students based on the platform.",
+      "people_offered": "4 people in a three-room apartment.",
+      "costs_included": "Not specified.",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14691",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "good"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Extremely affordable at €62 per person",
+        "Fits 4 people capacity",
+        "Adequate size of 75 m²"
+      ],
+      "negatives": [
+        "Rental period is for 2023-2024, not available for 2026-27 school year"
+      ],
+      "restrictions": [
+        "Suitable for students only"
+      ],
+      "rental_period": "October 1, 2023 to June 15, 2024",
+      "who_allowed": "Students",
+      "people_offered": "4 people in a 3-room apartment",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14113",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Extremely affordable at €62.5 per person, well under €300 budget",
+        "Capacity matches exactly for 4 people",
+        "Convenient location near bus station in Koper",
+        "Adequate size of 80 m² for 4 occupants"
+      ],
+      "negatives": [
+        "Rental period not specified; availability for School Year 2026-27 unclear",
+        "Incomplete description; details on room arrangement and conditions missing",
+        "Utilities status not mentioned; potential additional costs"
+      ],
+      "restrictions": [
+        "No specific restrictions mentioned in the listing"
+      ],
+      "rental_period": "Not specified; confirmation needed for availability during School Year 2026-27",
+      "who_allowed": "Not specified; likely open to students or general renters based on context",
+      "people_offered": "4 people in a three-room apartment (80 m²)",
+      "costs_included": "Utilities status not mentioned; likely not included in the rent",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/13742",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Recommended",
+      "positives": [
+        "Extremely affordable at 72 EUR per person, well under the 300 EUR budget",
+        "Fully furnished with essential amenities including Wi-Fi, air conditioning, heating, and private parking",
+        "Quiet environment with close proximity to shops and markets (450 m)",
+        "Accommodates 4 people comfortably with two bedrooms each having two beds"
+      ],
+      "negatives": [
+        "Rental period for the school year is not explicitly stated in the listing",
+        "Location in Portorož may require consideration of commute to university, though not specified"
+      ],
+      "restrictions": [
+        "Intended for students only"
+      ],
+      "rental_period": "Not specified, but implied for students; likely aligns with academic year",
+      "who_allowed": "Students",
+      "people_offered": "4 people in a 3-room apartment with two bedrooms (2 beds each)",
+      "costs_included": "Utilities such as Wi-Fi, internet, AC, and heating are listed and likely included in the rent",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/15146",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "good"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Low price at 280 EUR total",
+        "Utilities included in rent",
+        "Central location in Koper",
+        "Apartment has a terrace"
+      ],
+      "negatives": [
+        "Rental period does not match school year 2026-27 (only available Feb-June 2026)",
+        "Possible gender restriction indicated by '( girl)' in description",
+        "Size of 55 m² may be tight for 4-5 people"
+      ],
+      "restrictions": [
+        "Rental period fixed to February 2026 to June 2026",
+        "May be restricted to females based on description"
+      ],
+      "rental_period": "February 2026 to June 2026",
+      "who_allowed": "Possibly females only, as indicated by '( girl)' in description",
+      "people_offered": "Capacity for 5 people, with room arrangements including a single room and a double bed",
+      "costs_included": "Yes, costs are included in the price",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14474",
+      "title": "Soba",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Extremely affordable at €58 per person, far below the €300 budget",
+        "Capacity of 4 people matches the group size",
+        "Location near faculties, ideal for students",
+        "Adequate living space with 75 m²"
+      ],
+      "negatives": [
+        "Rental period not aligned with school year 2026-27; only available immediately",
+        "Additional fees for utilities not included in rent",
+        "Currently occupied by three students, which may affect availability or comfort"
+      ],
+      "restrictions": [
+        "Likely restricted to students based on description"
+      ],
+      "rental_period": "Available immediately, with no specified end date or school year commitment",
+      "who_allowed": "Students",
+      "people_offered": "4 people, with beds in shared double rooms",
+      "costs_included": "Rent only, utilities (fees) are extra",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/12381",
+      "title": "Dvosobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Decent",
+      "positives": [
+        "Very affordable at 48 EUR per person, well under the 300 EUR budget",
+        "Central location in Koper, near faculties and libraries ideal for students",
+        "Includes amenities like washing machine and social atrium",
+        "Capacity matches exactly 4 people"
+      ],
+      "negatives": [
+        "Small size at 45 m² for 4 people may be cramped",
+        "Availability from February 1 may not align with school year 2026-27 starting in fall",
+        "Room arrangement has only one room with three beds, potentially tight for sleeping"
+      ],
+      "restrictions": [],
+      "rental_period": "Available from February 1, duration not specified",
+      "who_allowed": "Likely students, but no restrictions mentioned",
+      "people_offered": "4 people, with one room containing three beds",
+      "costs_included": "Utilities status not specified in listing",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/13284",
+      "title": "Dvosobno stanovanje",
+      "verdict_class": "decent"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Low price per person (58 EUR rent + utilities)",
+        "Includes Wi-Fi, washing machine, air conditioning",
+        "Free parking available",
+        "Good location with shops and 15-minute walk to center"
+      ],
+      "negatives": [
+        "Only one bed available, not suitable for a group of 4 seeking a whole apartment",
+        "Small size (50 m²) for 4 people",
+        "Available from March 2026, may not align with school year start in fall"
+      ],
+      "restrictions": [
+        "Likely for students only, as mentioned in description"
+      ],
+      "rental_period": "Available from March 1, 2026, end date not specified",
+      "who_allowed": "Students",
+      "people_offered": "1 bed in a double room in a shared apartment for 4 people total",
+      "costs_included": "Wi-Fi, washing machine, air conditioning included; additional utility costs extra",
+      "avg_utilities": "approximately 30-40 EUR per person",
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14173",
+      "title": "Dvosobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Affordable price per person around €290-300 within budget",
+        "Fully furnished with amenities including sea view balcony",
+        "Close to public transport and essential services"
+      ],
+      "negatives": [
+        "Rental period starts January 2026, not aligned with school year 2026-27 (September start)",
+        "Likely only one room available, insufficient for a group of 4 people",
+        "Existing female tenants may limit suitability for mixed or larger groups"
+      ],
+      "restrictions": [
+        "No smoking",
+        "No pets"
+      ],
+      "rental_period": "From January 1, 2026",
+      "who_allowed": "Students (female students implied from description)",
+      "people_offered": "Renting a room in a shared apartment, likely for 1-2 people in available room",
+      "costs_included": "Utilities not included",
+      "avg_utilities": "200-240 EUR per apartment (shared among tenants)",
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14665",
+      "title": "Trisobno stanovanje",
+      "verdict_class": "bad"
+    },
+    {
+      "verdict": "Skip",
+      "positives": [
+        "Affordable price at 70 EUR per person, well under the 300 EUR budget",
+        "Central location in Koper"
+      ],
+      "negatives": [
+        "Only one bed available for a female student, not suitable for a group of 4",
+        "Gender restriction limits applicability"
+      ],
+      "restrictions": [
+        "Female students only"
+      ],
+      "rental_period": "From October 2026, duration not specified but likely for the school year",
+      "who_allowed": "Female students",
+      "people_offered": "1 bed for a female student in a two-room apartment",
+      "costs_included": "Not specified",
+      "avg_utilities": null,
+      "url": "https://www.mojcimer.si/seznam-prostih-sob/14340",
+      "title": "Dvosobno stanovanje",
+      "verdict_class": "bad"
+    }
+  ]
+}

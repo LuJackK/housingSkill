@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Housing Report — {{DATE}}</title>
+    <style>
+        @page { size: A4; margin: 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: white;
+            color: #1a1a1a;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+        .page { padding: 24px 28px; }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #1a1a2e;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
+        .header h1 { font-size: 22px; font-weight: 800; color: #1a1a2e; }
+        .header .subtitle { font-size: 12px; color: #666; margin-top: 2px; }
+        .header .date { font-size: 13px; color: #666; }
+        .stats { display: flex; gap: 20px; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 20px; font-weight: 800; color: #4a90d9; }
+        .stat-label { font-size: 9px; text-transform: uppercase; color: #999; letter-spacing: 0.5px; }
+
+        /* Criteria bar */
+        .criteria {
+            background: #f0f4f8;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 24px;
+            font-size: 11px;
+            flex-wrap: wrap;
+        }
+        .criteria-item label { color: #888; font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; display: block; }
+        .criteria-item .value { font-weight: 700; color: #333; }
+
+        /* Listing card */
+        .listing {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            page-break-inside: avoid;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .listing.top-3 { border-color: #4a90d9; border-width: 2px; }
+
+        .listing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 18px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f4f8 100%);
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .listing-rank {
+            font-size: 12px;
+            font-weight: 800;
+            color: #4a90d9;
+        }
+        .listing-verdict {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .verdict-recommended { background: #c8e6c9; color: #2e7d32; }
+        .verdict-decent { background: #fff3cd; color: #856404; }
+        .verdict-skip { background: #ffcdd2; color: #c62828; }
+        .new-badge { background: #28a745; color: white; font-size: 9px; padding: 2px 6px; border-radius: 8px; margin-left: 6px; }
+
+        .listing-body { padding: 16px 18px; }
+
+        .listing-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .listing-title { font-size: 15px; font-weight: 700; color: #1a1a2e; }
+        .listing-address { font-size: 11px; color: #666; margin-top: 2px; }
+        .listing-price { text-align: right; }
+        .listing-price .total { font-size: 22px; font-weight: 800; color: #2d5a27; }
+        .listing-price .per-person { font-size: 11px; color: #888; }
+
+        /* Key specs */
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+        .spec {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 8px 10px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        .spec-label { font-size: 8px; text-transform: uppercase; color: #999; letter-spacing: 0.5px; }
+        .spec-value { font-size: 12px; font-weight: 700; color: #333; margin-top: 2px; }
+        .spec-value.highlight { color: #c62828; }
+        .spec-value.good { color: #2e7d32; }
+
+        /* Key info from description */
+        .key-info {
+            background: #fffde7;
+            border-left: 3px solid #ffc107;
+            border-radius: 0 6px 6px 0;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            font-size: 11px;
+        }
+        .key-info-title { font-weight: 700; font-size: 9px; text-transform: uppercase; color: #999; margin-bottom: 6px; }
+        .key-info-row { display: flex; gap: 8px; margin-bottom: 4px; }
+        .key-info-label { font-weight: 600; color: #666; min-width: 90px; }
+        .key-info-value { color: #333; }
+
+        /* LLM Verdict Summary */
+        .verdict-summary {
+            border-radius: 6px;
+            padding: 8px 12px;
+            margin-bottom: 12px;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+        .verdict-summary-label { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 3px; }
+        .verdict-summary-recommended { background: #e8f5e9; border-left: 3px solid #4caf50; color: #2e7d32; }
+        .verdict-summary-recommended .verdict-summary-label { color: #388e3c; }
+        .verdict-summary-decent { background: #fff8e1; border-left: 3px solid #ffc107; color: #f57f17; }
+        .verdict-summary-decent .verdict-summary-label { color: #f9a825; }
+        .verdict-summary-skip { background: #ffebee; border-left: 3px solid #ef5350; color: #c62828; }
+        .verdict-summary-skip .verdict-summary-label { color: #e53935; }
+
+        /* Tags */
+        .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+        .tag {
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .tag-positive { background: #e8f5e9; color: #2e7d32; }
+        .tag-negative { background: #ffebee; color: #c62828; }
+        .tag-restriction { background: #fff3e0; color: #e65100; }
+
+        /* Description */
+        .description {
+            font-size: 10px;
+            color: #555;
+            line-height: 1.6;
+            padding: 12px;
+            background: #fafafa;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #f0f0f0;
+        }
+        .description-label { font-size: 9px; font-weight: 700; text-transform: uppercase; color: #999; margin-bottom: 6px; }
+
+        /* Amenities */
+        .amenities { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+        .amenity { font-size: 9px; padding: 2px 6px; background: #e3f2fd; border-radius: 4px; color: #1565c0; }
+
+        /* Contact & Link */
+        .listing-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .contact { font-size: 10px; color: #666; }
+        .contact a { color: #4a90d9; text-decoration: none; }
+        .listing-link {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #4a90d9;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        /* Images */
+        .images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .images img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 16px;
+            color: #bbb;
+            font-size: 9px;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+
+        @media print {
+            .listing { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>{{REPORT_TITLE}}</h1>
+            <div class="subtitle">{{DATE}} &middot; {{LOCATION}}, Slovenia</div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-num">{{TOTAL}}</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">{{SHOWING}}</div>
+                <div class="stat-label">Shown</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">{{NEW_COUNT}}</div>
+                <div class="stat-label">New</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Criteria -->
+    <div class="criteria">
+        <div class="criteria-item">
+            <label>Max Price</label>
+            <div class="value">&euro;{{MAX_PRICE}}/person</div>
+        </div>
+        <div class="criteria-item">
+            <label>People</label>
+            <div class="value">{{PEOPLE_NEEDED}}</div>
+        </div>
+        <div class="criteria-item">
+            <label>Location</label>
+            <div class="value">{{LOCATION}}</div>
+        </div>
+        <div class="criteria-item">
+            <label>Dates</label>
+            <div class="value">{{DATE_RANGE}}</div>
+        </div>
+        {{#GENDER}}
+        <div class="criteria-item">
+            <label>Gender</label>
+            <div class="value">{{GENDER}}</div>
+        </div>
+        {{/GENDER}}
+    </div>
+
+    <!-- Listings -->
+    {{#LISTINGS}}
+    <div class="listing {{#IS_TOP}}top-3{{/IS_TOP}}">
+        <div class="listing-header">
+            <span class="listing-rank">#{{RANK}}{{#IS_NEW}}<span class="new-badge">NEW</span>{{/IS_NEW}}</span>
+            <span class="listing-verdict verdict-{{VERDICT_CLASS}}">{{VERDICT}}</span>
+        </div>
+        <div class="listing-body">
+            <div class="listing-top-row">
+                <div>
+                    <div class="listing-title">{{TITLE}}</div>
+                    <div class="listing-address">{{ADDRESS}}</div>
+                </div>
+                <div class="listing-price">
+                    <div class="total">&euro;{{PRICE}}</div>
+                    <div class="per-person">&euro;{{PRICE_PP}}/person</div>
+                </div>
+            </div>
+
+            <!-- Key Specs -->
+            <div class="specs">
+                <div class="spec">
+                    <div class="spec-label">Size</div>
+                    <div class="spec-value">{{SIZE}} m&sup2;</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-label">Beds</div>
+                    <div class="spec-value">{{BEDS}}</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-label">Baths</div>
+                    <div class="spec-value">{{BATHS}}</div>
+                </div>
+                {{#HAS_UTILITIES}}
+                <div class="spec">
+                    <div class="spec-label">Utilities</div>
+                    <div class="spec-value">{{UTILITIES}}</div>
+                </div>
+                {{/HAS_UTILITIES}}
+                <div class="spec">
+                    <div class="spec-label">Available</div>
+                    <div class="spec-value">{{AVAILABLE}}</div>
+                </div>
+            </div>
+
+            <!-- Key Info from Description -->
+            {{#HAS_KEY_INFO}}
+            <div class="key-info">
+                <div class="key-info-title">Details from Description</div>
+                {{#RENTAL_PERIOD}}
+                <div class="key-info-row">
+                    <span class="key-info-label">Period:</span>
+                    <span class="key-info-value">{{RENTAL_PERIOD}}</span>
+                </div>
+                {{/RENTAL_PERIOD}}
+                {{#WHO_ALLOWED}}
+                <div class="key-info-row">
+                    <span class="key-info-label">Who:</span>
+                    <span class="key-info-value">{{WHO_ALLOWED}}</span>
+                </div>
+                {{/WHO_ALLOWED}}
+                {{#PEOPLE_OFFERED}}
+                <div class="key-info-row">
+                    <span class="key-info-label">Looking for:</span>
+                    <span class="key-info-value">{{PEOPLE_OFFERED}}</span>
+                </div>
+                {{/PEOPLE_OFFERED}}
+                {{#COSTS_INCLUDED}}
+                <div class="key-info-row">
+                    <span class="key-info-label">Costs:</span>
+                    <span class="key-info-value">{{COSTS_INCLUDED}}</span>
+                </div>
+                {{/COSTS_INCLUDED}}
+                {{#AVG_UTILITIES}}
+                <div class="key-info-row">
+                    <span class="key-info-label">Utilities:</span>
+                    <span class="key-info-value">{{AVG_UTILITIES}}</span>
+                </div>
+                {{/AVG_UTILITIES}}
+            </div>
+            {{/HAS_KEY_INFO}}
+
+            <!-- Tags -->
+            <div class="tags">
+                {{#POSITIVES}}<span class="tag tag-positive">+ {{.}}</span>{{/POSITIVES}}
+                {{#NEGATIVES}}<span class="tag tag-negative">&minus; {{.}}</span>{{/NEGATIVES}}
+                {{#RESTRICTIONS}}<span class="tag tag-restriction">&hearts; {{.}}</span>{{/RESTRICTIONS}}
+            </div>
+
+            <!-- LLM Verdict Summary -->
+            {{#HAS_VERDICT_SUMMARY}}
+            <div class="verdict-summary verdict-summary-{{VERDICT_CLASS}}">
+                <span class="verdict-summary-label">Analysis</span>
+                {{VERDICT_SUMMARY}}
+            </div>
+            {{/HAS_VERDICT_SUMMARY}}
+
+            <!-- Full Description (English) -->
+            {{#HAS_DESCRIPTION_EN}}
+            <div class="description">
+                <div class="description-label">Description (translated)</div>
+                {{DESCRIPTION_EN}}
+            </div>
+            {{/HAS_DESCRIPTION_EN}}
+
+            <!-- Amenities -->
+            {{#HAS_AMENITIES}}
+            <div class="amenities">
+                {{#AMENITIES}}<span class="amenity">{{.}}</span>{{/AMENITIES}}
+            </div>
+            {{/HAS_AMENITIES}}
+
+            <!-- Images -->
+            {{#HAS_IMAGES}}
+            <div class="images">
+                {{#IMAGES}}<img src="{{.}}">{{/IMAGES}}
+            </div>
+            {{/HAS_IMAGES}}
+
+            <!-- Footer -->
+            <div class="listing-footer">
+                <div class="contact">
+                    {{#HAS_PHONE}}T: <a href="tel:{{PHONE}}">{{PHONE}}</a>{{/HAS_PHONE}}
+                    {{#HAS_EMAIL}} &middot; E: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>{{/HAS_EMAIL}}
+                </div>
+                <a href="{{URL}}" class="listing-link">View on Mojcimer &rarr;</a>
+            </div>
+        </div>
+    </div>
+    {{/LISTINGS}}
+
+    <div class="footer">
+        Generated {{TIMESTAMP}} &middot; mojcimer.si &middot; Clancy &#129408;
+    </div>
+</div>
+</body>
+</html>
