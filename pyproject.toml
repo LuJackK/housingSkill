@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "housing-skill"
+version = "0.1.0"
+description = "Housing skill for AI agents – scrapes Slovenian real-estate websites for rental listings, analyses and ranks results, and compiles scheduled reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-mock>=3.12.0",
+    "responses>=0.24.0",
+]
+
+[project.scripts]
+housing-skill = "main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
